@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="30dp"
+        android:background="@color/turquoise"
+        android:text="@string/calculadora"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtOperaciones"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="textEnd"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/screen"
+        app:layout_constraintEnd_toEndOf="@+id/title"
+        app:layout_constraintStart_toStartOf="@+id/title"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <TextView
+        android:id="@+id/screen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:padding="20dp"
+        android:background="@drawable/text_border"
+        android:text="0"
+        android:textAlignment="textEnd"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toTopOf="@+id/nueve"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <Button
+        android:id="@+id/uno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:background="@drawable/shape"
+        android:gravity="center"
+        android:text="1"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/dos"
+        app:layout_constraintTop_toBottomOf="@+id/cuatro" />
+
+    <Button
+        android:id="@+id/dos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:background="@drawable/shape"
+        android:gravity="center"
+        android:text="2"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/cinco" />
+
+    <Button
+        android:id="@+id/tres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:background="@drawable/shape"
+        android:gravity="center"
+        android:text="3"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/dos"
+        app:layout_constraintTop_toBottomOf="@+id/seis" />
+
+    <Button
+        android:id="@+id/cuatro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:background="@drawable/shape"
+        android:gravity="center"
+        android:text="4"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/cinco"
+        app:layout_constraintTop_toBottomOf="@+id/siete" />
+
+    <Button
+        android:id="@+id/cinco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:background="@drawable/shape"
+        android:gravity="center"
+        android:text="5"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/ocho" />
+
+    <Button
+        android:id="@+id/seis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:background="@drawable/shape"
+        android:gravity="center"
+        android:text="6"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/cinco"
+        app:layout_constraintTop_toBottomOf="@+id/nueve" />
+
+    <Button
+        android:id="@+id/siete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:background="@drawable/shape"
+        android:gravity="center"
+        android:text="7"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/ocho"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <Button
+        android:id="@+id/ocho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:background="@drawable/shape"
+        android:gravity="center"
+        android:text="8"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <Button
+        android:id="@+id/nueve"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:background="@drawable/shape"
+        android:gravity="center"
+        android:text="9"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/ocho"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <Button
+        android:id="@+id/cero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:background="@drawable/shape"
+        android:gravity="center"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/coma"
+        app:layout_constraintTop_toBottomOf="@+id/uno" />
+
+    <Button
+        android:id="@+id/sumar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:background="@drawable/shape"
+        android:gravity="center"
+        android:text="+"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/tres"
+        app:layout_constraintTop_toBottomOf="@+id/restar" />
+
+    <Button
+        android:id="@+id/restar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:background="@drawable/shape"
+        android:gravity="center"
+        android:text="-"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/tres"
+        app:layout_constraintTop_toBottomOf="@+id/multi" />
+
+    <Button
+        android:id="@+id/multi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:background="@drawable/shape"
+        android:gravity="center"
+        android:text="x"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/seis"
+        app:layout_constraintTop_toBottomOf="@+id/divi" />
+
+    <Button
+        android:id="@+id/divi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:background="@drawable/shape"
+        android:gravity="center"
+        android:text="÷"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/nueve"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <Button
+        android:id="@+id/igual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:background="@drawable/shape"
+        android:gravity="center"
+        android:text="="
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/sumar"
+        app:layout_constraintTop_toBottomOf="@+id/tres" />
+
+    <Button
+        android:id="@+id/coma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:background="@drawable/shape"
+        android:gravity="center"
+        android:text="."
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/igual"
+        app:layout_constraintTop_toBottomOf="@+id/tres" />
+
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:background="@drawable/shape_2"
+        android:gravity="center"
+        android:text="C"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/siete"
+        app:layout_constraintEnd_toStartOf="@+id/minus" />
+
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:layout_marginBottom="108dp"
+        android:background="@drawable/shape_2"
+        android:gravity="center"
+        android:text="⌫"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/divi"
+        app:layout_constraintStart_toEndOf="@+id/percent" />
+
+    <Button
+        android:id="@+id/percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:background="@drawable/shape_2"
+        android:gravity="center"
+        android:text="%"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/nueve"
+        app:layout_constraintStart_toEndOf="@+id/minus" />
+
+    <Button
+        android:id="@+id/minus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:background="@drawable/shape_2"
+        android:gravity="center"
+        android:text="+/-"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/ocho"
+        app:layout_constraintEnd_toStartOf="@+id/guideline" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="390dp" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
